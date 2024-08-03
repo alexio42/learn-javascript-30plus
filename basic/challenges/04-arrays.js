@@ -10,9 +10,8 @@
 
 */
 
-const fruits = ["apple", "orange", "lemon", "pineapple", 67];
+const fruits = ['apple', 'orange', 'lemon', 'pineapple', 67];
 console.log(fruits);
 const firstFruit = fruits[0];
-fruits[4] = "melon";
-console.log(firstFruit);
-console.log(fruits);
+fruits[4] = 'melon';
+console.log(firstFruit, fruits);
