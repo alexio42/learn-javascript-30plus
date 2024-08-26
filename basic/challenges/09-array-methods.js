@@ -11,3 +11,30 @@ const updatedStudents = students.map(function (student) {
 });
 
 console.log(updatedStudents);
+
+// highScores
+// 1. filter array and return only scores >= 80
+// 2. assign to 'highScores' variable and log
+
+const highScores = students.filter(function (student) {
+  //   if (student.score >= 80) {
+  //     return student;
+  //   }  OR
+  // if (student.score >= 80) return student; OR
+  return student.score >= 80;
+});
+
+console.log(highScores);
+
+// specificId
+// 1. find specific id in array
+// 2. assign to 'specificId' variable and log
+
+const specificId = students.find(function (student) {
+  if (student.id === 3) {
+    return student; // returns entire object/array/string/number that matches. Undefined if no match
+  }
+  // OR return student.id === 3;
+});
+
+console.log(specificId.name); // just returns name of matching ID

@@ -1,6 +1,6 @@
 // find
 // returns single instance - (in this case object)
-// returns first mathc, if no match, returns undefined
+// returns first match, if no match, returns undefined
 // great for getting unique value
 
 const people = [
