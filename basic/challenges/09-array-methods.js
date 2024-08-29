@@ -37,4 +37,47 @@ const specificId = students.find(function (student) {
   // OR return student.id === 3;
 });
 
-console.log(specificId.name); // just returns name of matching ID
+console.log(specificId.name); // use array.key to return specific value of matching ID
+
+// averageScore
+// 1. sum up all student.score values with reduce
+// 2. divide by the length of the students array
+// 3. assign to 'averageScore' and log
+
+const averageScore =
+  students.reduce(function (scoresTotal, student) {
+    scoresTotal += student.score;
+    return scoresTotal;
+  }, 0) / students.length;
+
+console.log(`Average score = ${averageScore}`);
+
+// Reduce #2 - survey
+// 1. list favourite subjects with reduce
+// {
+//  maths: 2
+//  philosophy: 1
+//  science: 1
+//  english: 1
+//  }
+// 2. assign to survey and log
+
+const survey = students.reduce(function (survey, student) {
+  // console.log(student.favouriteSubject);
+  const favSubject = student.favouriteSubject;
+  // if (survey[favSubject] === undefined) {
+  //   survey[favSubject] = 1;
+  // } else {
+  //   survey[favSubject]++;
+  // }  My solution.
+
+  if (survey[favSubject]) {
+    survey[favSubject]++;
+  } else {
+    survey[favSubject] = 1;
+  } // instructor solution.
+
+  return survey;
+}, {}); // using {} here means reduce will return an object
+
+console.log(survey);
